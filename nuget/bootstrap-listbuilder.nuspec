@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>bootstrap-listbuilder</id>
+        <version>0.0.0</version>
+        <title>bootstrap-listbuilder</title>
+        <authors>Jim Liddell</authors>
+        <projectUrl>https://github.com/linn/bootstrap-listbuilder</projectUrl>
+        <licenseUrl>https://github.com/linn/bootstrap-listbuilder/blob/master/LICENSE</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Simple list builder component for Bootstrap.</description>
+        <tags>bootstrap</tags>
+        <dependencies>
+            <dependency id="bootstrap" version="3.0.3" />
+            <dependency id="jQuery" version="1.7.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\src\bootstrap-listbuilder.js" target="content\Scripts\bootstrap-listbuilder.js" />
+        <file src="..\src\bootstrap-listbuilder.css" target="content\Content\bootstrap-listbuilder.css" />
+    </files>
+</package>

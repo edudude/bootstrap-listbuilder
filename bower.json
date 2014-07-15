@@ -1,0 +1,33 @@
+{
+  "name": "bootstrap-listbuilder",
+  "description": "Simple list builder component for Bootstrap.",
+  "main": [
+    "src/bootstrap-listbuilder.js",
+    "src/bootstrap-listbuilder.css"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "bootstrap"
+  ],
+  "authors": [
+    "Jim Liddell"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.1"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/linn/bootstrap-listbuilder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "nuget",
+    "spec",
+    "Gruntfile.js",
+    "package.json",
+    ".travis.yml",
+    ".gitignore"
+  ]
+}
