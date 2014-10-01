@@ -1,4 +1,5 @@
 [![Build Status](http://img.shields.io/travis/linn/bootstrap-listbuilder/master.svg?style=flat)](https://travis-ci.org/linn/bootstrap-listbuilder)
+[![Bower Version](http://img.shields.io/bower/v/bootstrap-listbuilder.svg?style=flat)](http://bower.io/search/?q=bootstrap-listbuilder)
 [![npm Version](http://img.shields.io/npm/v/bootstrap-listbuilder.svg?style=flat)](https://www.npmjs.org/package/bootstrap-listbuilder)
 [![Nuget Version](http://img.shields.io/nuget/v/bootstrap-listbuilder.svg?style=flat)](https://www.nuget.org/packages/bootstrap-listbuilder/)
 bootstrap-listbuilder
