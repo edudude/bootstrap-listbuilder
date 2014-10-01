@@ -7,7 +7,7 @@ bootstrap-listbuilder
 Simple list builder component for Bootstrap.
 
 ## Installation
-### [Bower](http://bower.io/search/?q=bootstrap-listbuilder)
+### [Bower](http://bower.io/search/?q=bootstrap-listbuilder) [![Bower Version](http://img.shields.io/bower/v/bootstrap-listbuilder.svg?style=flat)](http://bower.io/search/?q=bootstrap-listbuilder)
 ```
 bower install bootstrap-listbuilder
 ```
