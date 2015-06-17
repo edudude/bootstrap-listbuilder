@@ -54,6 +54,7 @@ module.exports = function (grunt) {
                 // as it is referenced when the nuget tasks are run
                 bump: false,
                 push: false,
+                pushTags: false,
                 commitMessage: 'Release <%= version %>'
                 /*github: { 
                     repo: 'linn/lawgr'
