@@ -29,14 +29,14 @@
         this.$prompt = $('<li class="list-group-item list-builder-prompt" style="cursor: pointer;">' +
             '<span class="text-muted">' + this.options.prompt + '</span>' +
             '<a href="#" class="btn btn-link btn-xs pull-right btn-prompt">' +
-			    '<span class="glyphicon glyphicon-plus"></span>' +
-		    '</a>' +
+                '<span class="glyphicon glyphicon-plus"></span>' +
+            '</a>' +
         '</li>');
         this.$element.append(this.$prompt);
 
         this.$input = $('<li class="list-group-item list-builder-input hidden">' +
-            '<form>' +
-                '<input class="form-control pull-left input-sm" type="' + this.options.type + '" placeholder="' + this.options.placeholder + '">' +
+            '<form class="pull-left">' +
+                '<input class="form-control input-sm" type="' + this.options.type + '" placeholder="' + this.options.placeholder + '">' +
             '</form>' +
             '<a href="#" class="btn btn-success-muted btn-xs btn-save pull-right">' +
                 '<span class="glyphicon glyphicon-ok"></span>' +
@@ -75,6 +75,12 @@
                 e.preventDefault();
                 self.toggle();
             });
+
+        this.$value = this.$input.find('input');
+
+        if (this.options.typeahead) {
+            this.$value.typeahead.apply(this.$value, this.options.typeahead);
+        }
     };
 
     ListBuilder.prototype.getItems = function () {
@@ -110,9 +116,9 @@
         this.$input.toggleClass('hidden');
 
         if (!this.$input.is('.hidden')) {
-            this.$input.find('input').focus();
+            this.$value.focus();
         } else {
-            this.$input.find('input').val('');
+            this.$value.val('');
             this.$prompt.find('.btn-prompt').focus();
         }
     };
@@ -123,8 +129,8 @@
     };
 
     ListBuilder.prototype.add = function () {
-        var value = this.$input.find('input').val().trim();
-        this.$input.find('input').val('');
+        var value = this.$value.val().trim();
+        this.$value.val('');
 
         if (!value) {
             return;
@@ -154,8 +160,9 @@
         var $elements = this.each(function () {
             var $this = $(this);
             var data = $this.data('list-builder');
+            var options = typeof option == 'object' && option;
             if (!data) {
-                $this.data('list-builder', (data = new ListBuilder(this)));
+                $this.data('list-builder', (data = new ListBuilder(this, options)));
             }
 
             if (typeof option == 'string') {
