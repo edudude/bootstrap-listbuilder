@@ -53,8 +53,6 @@ module.exports = function (grunt) {
                 // supports reloading the pkg config var which we need
                 // as it is referenced when the nuget tasks are run
                 bump: false,
-                push: false,
-                pushTags: false,
                 commitMessage: 'Release <%= version %>'
                 /*github: { 
                     repo: 'linn/lawgr'
